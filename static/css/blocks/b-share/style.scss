@@ -1,0 +1,24 @@
+.b-share {
+  display: none;
+  padding: 40px 28px 46px;
+  width: 616px;
+  text-align: center;
+  background: url("blocks/b-share/share-bg.jpg") no-repeat;
+
+  h1 {
+    font-family: "Engine";
+    font-size: 6.947rem;
+    line-height: 5.244rem;
+    text-transform: uppercase;
+    margin-bottom: 48px;
+  }
+
+  .b-social {
+    margin: 50px 0 54px;
+
+    a {
+      display: inline-block;
+      margin-right: 8px;
+    }
+  }
+}

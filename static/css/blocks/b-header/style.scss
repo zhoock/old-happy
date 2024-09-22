@@ -1,0 +1,66 @@
+
+.b-header {
+  height: 58px;
+  position: relative;
+  background: $header-bg;
+
+  .b-header__logo {
+    background: url("blocks/b-header/logo.png") no-repeat;
+    width: 132px;
+    height: 47px;
+    display: inline-block;
+    text-indent: -9999px;
+    margin: 7px 0 0 41px;
+    float: left;
+  }
+
+  .b-top-bar {
+    float: left;
+    margin: 17px 0 0 16%;
+
+    .b-top-bar__section {
+      @include pie-clearfix;
+      margin: 0;
+
+      li {
+        float: left;
+        font-family: 'Engine';
+        font-size: 2.4rem; /* 24px */
+        text-transform: uppercase;
+        margin-right: 70px;
+
+        a {
+          color: $nav-link;
+          position: relative;
+
+          &:hover, &.current {
+            color: $nav-link-active;
+          }
+
+          &.current {
+            pointer-events: none;
+          }
+
+          &.current:before {
+            background: $nav-link-active;
+            border: 3px solid $nav-link;
+            border-radius: 12px;
+            bottom: -25px;
+            content: "";
+            height: 12px;
+            left: 50%;
+            margin-left: -6px;
+            position: absolute;
+            width: 12px;
+            z-index: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+

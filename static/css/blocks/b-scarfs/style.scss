@@ -1,0 +1,277 @@
+.b-scarfs {
+
+  //brush
+  .b-scarf-brush {
+    position: relative;
+    z-index: 1;
+
+    .b-scarf-brush__img {
+      width: 51.9375%; /* 831px / 1600px */
+      margin: 2.5% 0 -.6% 23.75%; /* 380px / 1600px */
+    }
+
+    //  scale
+    .b-scarf__scale {
+      width: 1.6875%; /* 27px / 1600px */
+      position: absolute;
+      left: 0;
+      top: 91.82%;
+
+      &.b-scarf__scale--blue {
+        div {
+          background: $scarf-blue;
+          border-color: lighten($scarf-blue, 20%);
+          color: $scarf-blue;
+        }
+      }
+
+      &.b-scarf__scale--green {
+        div {
+          background: $scarf-green;
+          border-color: lighten($scarf-green, 20%);
+          color: $scarf-green;
+        }
+      }
+
+      div {
+        height: 4px;
+        width: 40.740740740741%; /* 11px / 27px */
+        margin-bottom: 14.86%; /* 4px */
+        border-style: solid;
+        border-width: 1px 0 1px 0;
+        font-family: 'Engine';
+        position: relative;
+
+        span {
+          display: inline-block;
+          position: absolute;
+          left: 35px;
+          top: -10px;
+          font-size: 1.8571em; /* 26px */
+        }
+
+        &:nth-of-type(10n+1) {
+          width: 100%;
+        }
+
+        &:nth-of-type(10n+6) {
+          //          width: 17px;
+          width: 62.962962962963%; /* 17px / 27px */
+        }
+      }
+    }
+  }
+
+  //  scarf
+  .b-scarf {
+    @include pie-clearfix;
+    position: relative;
+
+    .b-scarf__bg {
+      position: absolute;
+      width: 28.75%; /* 460px / 1600px */
+      z-index: -1;
+      height: 100%;
+
+      &.b-scarf__bg--left {
+        left: 0;
+        top: 0;
+      }
+
+      &.b-scarf__bg--right {
+        right: 0;
+        top: 0;
+      }
+
+      &.b-scarf__bg--blue {
+        background: url("blocks/b-scarfs/scarf-blue-bg.png") repeat;
+      }
+
+      &.b-scarf__bg--green {
+        background: url("blocks/b-scarfs/scarf-green-bg.png") repeat;
+      }
+
+      &.b-scarf__bg--purple {
+        background: url("blocks/b-scarfs/scarf-purple-bg.png") repeat;
+      }
+
+      &.b-scarf__bg--red {
+        background: url("blocks/b-scarfs/scarf-red-bg.png") repeat;
+      }
+
+      &.b-scarf__bg--crimson {
+        background: url("blocks/b-scarfs/scarf-crimson-bg.png") repeat;
+      }
+
+      &.b-scarf__bg--gold {
+        background: url("blocks/b-scarfs/scarf-gold-bg.png") repeat;
+      }
+    }
+
+    // cart user
+    .b-scarf__card-user {
+      width: 18.1875%; /* 291px / 1600px */
+      height: 101px;
+      padding: 13px 15px;
+
+      &.b-scarf__card-user--left {
+        float: left;
+        margin: 149px 0 0 6.5625%; /* 104px / 1600px */
+
+        &.b-scarf__card-user--blue {
+          background: url("blocks/b-scarfs/user-card-blue-left.png") no-repeat;
+        }
+
+        &.b-scarf__card-user--purple {
+          background: url("blocks/b-scarfs/user-card-purple-left.png") no-repeat;
+        }
+
+        &.b-scarf__card-user--green {
+          background: url("blocks/b-scarfs/user-card-green-left.png") no-repeat;
+        }
+
+        &.b-scarf__card-user--gold {
+          background: url("blocks/b-scarfs/user-card-gold-left.png") no-repeat;
+        }
+
+        &.b-scarf__card-user--red {
+          background: url("blocks/b-scarfs/user-card-red-left.png") no-repeat;
+        }
+
+        .b-scarf__card-user__photo {
+          border: 2px solid $card-text;
+          border-radius: 2px;
+          float: left;
+        }
+
+        h3 {
+          color: $card-text;
+          font-family: "SegoeUI";
+          margin: 0 0 14px 90px;
+          font-size: 1.8rem /* 18px */
+        }
+
+        .b-scarf__card-user-heart {
+          position: relative;
+          color: $card-text;
+          font-size: 1.2rem; /* 12px */
+          margin-left: 90px;
+          padding-left: 24px;
+
+          &:after {
+            content: url("blocks/b-scarfs/heart-icon.png");
+            position: absolute;
+            left: 0;
+            top: 4px;
+            width: 20px;
+            height: 16px;
+          }
+        }
+      }
+
+      &.b-scarf__card-user--right {
+        background-position: 100% 0 !important;
+        float: right;
+        margin: 149px 6.5625% 0 0; /* 104px / 1600px */
+
+        &.b-scarf__card-user--green {
+          background: url("blocks/b-scarfs/user-card-green-right.png") no-repeat;
+        }
+
+        &.b-scarf__card-user--red {
+          background: url("blocks/b-scarfs/user-card-red-right.png") no-repeat;
+        }
+
+        &.b-scarf__card-user--purple {
+          background: url("blocks/b-scarfs/user-card-purple-right.png") no-repeat;
+        }
+
+        &.b-scarf__card-user--crimson {
+          background: url("blocks/b-scarfs/user-card-crimson-right.png") no-repeat;
+        }
+
+        .b-scarf__card-user__photo {
+          border: 2px solid $card-text;
+          border-radius: 2px;
+          float: right;
+        }
+
+        h3 {
+          color: $card-text;
+          font-family: "SegoeUI";
+          margin: 0 90px 14px 0;
+          font-size: 1.2857em; /* 18px */
+          text-align: right;
+        }
+
+        .b-scarf__card-user-heart {
+          position: relative;
+          color: $card-text;
+          font-size: 0.8571em; /* 12px */
+          margin-left: 103px;
+          padding-left: 24px;
+
+          &:after {
+            content: url("blocks/b-scarfs/heart-icon.png");
+            position: absolute;
+            left: 0;
+            top: 4px;
+            width: 20px;
+            height: 16px;
+          }
+        }
+      }
+    }
+
+    .b-scarf__img {
+      position: relative;
+      width: 48.875%; /* 782px / 1600px */
+      margin-top: -.5%;
+
+      &.b-scarf__img--left {
+        float: left;
+        margin-left: .66%;
+      }
+
+      &.b-scarf__img--right {
+        float: right;
+        margin-right: .9%;
+      }
+
+      .b-scarf__img__bg {
+        position: absolute;
+        z-index: -1;
+        left: 1%;
+        top: -2%;
+        width: 98%;
+        height: 30px;
+
+        &.b-scarf__img__bg--green {
+          background: $scarf-green-bg;
+        }
+
+        &.b-scarf__img__bg--purple {
+          background: $scarf-purple-bg;
+        }
+
+        &.b-scarf__img__bg--red {
+          background: $scarf-red-bg;
+        }
+
+        &.b-scarf__img__bg--crimson {
+          background: $scarf-crimson-bg;
+        }
+
+        &.b-scarf__img__bg--gold {
+          background: $scarf-gold-bg;
+        }
+      }
+    }
+  }
+}
+
+.b-label {
+  width: 309px;
+  height: 67px;
+  margin: 79px auto 134px;
+}

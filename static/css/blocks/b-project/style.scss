@@ -1,0 +1,239 @@
+.b-multicolored-scarf {
+  left: 16.25%; /* 260px / 1600px */
+  top: -557px;
+  position: absolute;
+  @include animation(scarf 2s forwards ease-out);
+  z-index: -1;
+  width: 23.3125%; /* 373px / 1600px */
+}
+
+@include keyframes(scarf) {
+  100% {
+    @include transform(translateY(615px));
+  }
+}
+
+.b-project {
+  position: absolute;
+  top: 153px;
+  left: 41.875%; /* 670px / 1600px */
+  width: 33.125%; /* 530px / 1600px */
+
+  h1 {
+    font-family: "Engine";
+    font-size: 6.947rem;
+    line-height: 5.244rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    @include opacity(0);
+    @include animation(heading 3s forwards ease-out);
+  }
+
+  @include keyframes(heading) {
+
+    30% {
+      @include opacity(0);
+    }
+
+    100% {
+      @include opacity(1);
+    }
+  }
+
+  h2 {
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+
+  .b-project__text {
+    @include opacity(0);
+    @include animation(text-block 3s forwards ease-out);
+  }
+
+  @include keyframes(text-block) {
+    40% {
+      @include opacity(0);
+    }
+
+    100% {
+      @include opacity(1);
+    }
+  }
+
+  .b-label-more {
+    margin: 40px 0 156px 0;
+    @include opacity(0);
+    @include animation(label-more 3s forwards ease-out);
+  }
+
+  @include keyframes(label-more) {
+    50% {
+      @include opacity(0);
+    }
+
+    100% {
+      @include opacity(1);
+    }
+  }
+}
+
+.b-label-close {
+  position: absolute;
+  width: 64px;
+  height: 91px;
+  right: 24px;
+  top: 58px;
+}
+
+/* -- Variables -- */
+$link-color: DarkOrange;
+/* link color        */
+$hr-color: Black;
+/* border color      */
+$icon-color: Grey;
+/* icon color        */
+$icon-color-notice: LimeGreen;
+/* icon color notice */
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  @include box-sizing(border-box);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+}
+
+.wrapper-blocks {
+  width: 570px;
+  margin: 2% auto;
+  overflow: hidden;
+
+  .wrapper-blocks__item {
+
+    h1 {
+      font-size: 2rem;
+      line-height: 3rem;
+      font-weight: 400;
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background: $hr-color;
+      }
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 400;
+      position: relative;
+      margin-bottom: 20px;
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 12%;
+        bottom: 9px;
+        width: 88%;
+        height: 1px;
+        border-top: 1px dotted $hr-color;
+      }
+    }
+
+    .wrapper-blocks__item__lists {
+      padding-left: 2em;
+
+      input[type="text"] {
+        padding: 4px;
+        width: 250px;
+        margin-bottom: 12px;
+      }
+
+      ul {
+        list-style: none;
+
+        li {
+          white-space: nowrap;
+          position: relative;
+          padding-left: 20px;
+          margin-left: -20px;
+
+          i {
+            @include opacity(0);
+            cursor: pointer;
+            color: Grey;
+
+            &:nth-child(1) {
+              margin-left: -14px;
+            }
+
+            & ~ i {
+              @include background-image(linear-gradient(to right, rgba(255, 255, 255, .9) 10%, white 90%));
+              text-align: right;
+              z-index: 1;
+              height: 20px;
+              position: absolute;
+              right: 0;
+              top: 4px;
+              padding-left: 8px;
+            }
+
+            &.js-check-circle {
+              color: LimeGreen;
+              @include animation(show 3s forwards ease-out);
+            }
+
+            @include keyframes(show) {
+              40% {
+                @include opacity(0);
+              }
+
+              100% {
+                @include opacity(1);
+              }
+            }
+
+            &:hover i {
+              @include opacity(1);
+            }
+
+            &:after {
+              content: "";
+              position: absolute;
+              top: 0;
+              right: 0;
+              @include background-image(linear-gradient(to right, rgba(255, 255, 255, .2) 20%, white 80%));
+              width: 30px;
+              height: 20px;
+            }
+          }
+        }
+
+        a {
+          color: $link-color;
+          @include transition-property(all);
+          @include transition-duration(.5s);
+
+          &:hover {
+            color: lighten($link-color, 12%);
+          }
+        }
+      }
+    }
+  }
+}
+
+@import "//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css";

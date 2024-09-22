@@ -1,0 +1,48 @@
+.b-clip {
+  width: 100%;
+  position: relative;
+
+  .b-video__play {
+    position: absolute;
+    width: 8.9375%; /* 143px / 1600px */
+    left: 50%;
+    top: 50%;
+    margin-left: -71.5px;
+    margin-top: -71.5px;
+    cursor: pointer;
+  }
+}
+
+.b-video {
+  position: relative;
+
+  .b-projector {
+    left: 19.5%;
+    position: absolute;
+    top: -73px;
+    width: 20.1875%;
+  }
+
+  .b-video-description {
+    position: absolute;
+    top: 42px;
+    left: 43.3125%; /* 693px / 1600px */
+    width: 36.5625%; /* 585px / 1600px */
+
+    h1 {
+      font-family: "Engine";
+      font-size: 6.947rem;
+      line-height: 5.244rem;
+      text-transform: uppercase;
+      margin-bottom: 37px;
+    }
+  }
+}
+
+.b-label-close {
+  position: absolute;
+  width: 64px;
+  height: 91px;
+  right: 24px;
+  top: 58px;
+}

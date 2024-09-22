@@ -1,0 +1,35 @@
+.container.b-post {
+  display: table;
+
+  .b-post__info {
+    width: 28.75%; /* 460px / 1600px */
+    vertical-align: top;
+    display: table-cell;
+    background: #92af4e;
+    padding: 43px;
+
+    .b-post__logo {
+      margin-bottom: 150px;
+    }
+
+    p {
+      font-family: "Engine";
+      color: white;
+      font-size: 3.609rem;
+      line-height: 4rem;
+      margin-bottom: 56px;
+    }
+  }
+
+  &:before {
+    background: none;
+  }
+
+  .b-post__scarf {
+    display: table-cell;
+    margin-left: 28.75%; /* 460px / 1600px */
+    padding-left: 28px;
+    padding-top: 41px;
+  }
+}
+

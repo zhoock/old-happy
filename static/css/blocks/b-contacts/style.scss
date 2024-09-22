@@ -1,0 +1,51 @@
+.container--contacts {
+  background-image: url("blocks/b-contacts/contact-phone-bg.png"), url("blocks/b-contacts/contact-cat-bg.png");
+  background-repeat: no-repeat;
+  background-position: 15% 39%, 93% 63%;
+
+  .b-contacts {
+    left: 47.625%; /* 762px / 1600px */
+    position: absolute;
+    top: 15%;
+    width: 480px;
+
+    h1 {
+      font-family: "Engine";
+      font-size: 6.947rem;
+      line-height: 5.244rem;
+      text-transform: uppercase;
+      margin: 0 0 52px -4px;
+    }
+
+    h2 {
+      font-family: "Open Sans";
+      font-size: 1.8rem;
+      line-height: 1.469rem;
+      font-weight: 600;
+      margin-bottom: 22px;
+    }
+
+    p {
+      line-height: 1.469rem;
+      font-size: 1.4rem;
+      margin-bottom: 30px;
+    }
+
+    .b-contacts__tel {
+      font-family: "Engine";
+      font-size: 3.775rem;
+      line-height: 3.962rem;
+    }
+
+    .b-contacts__mail {
+      font-size: 2.1rem;
+      line-height: 1.469rem;
+      background: url("blocks/b-contacts/contact-email-bg.png") no-repeat;
+      width: 252px;
+      height: 45px;
+      margin-left: -19px;
+      margin-top: -16px;
+      padding: 13px 0 0 21px;
+    }
+  }
+}
